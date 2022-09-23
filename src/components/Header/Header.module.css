@@ -1,0 +1,32 @@
+.wrapper{
+    display:grid;
+    grid-template-columns: 20% 1fr auto auto auto auto;
+    align-items: center;
+    border-bottom: 1px solid #F7F4F4;
+    padding: 8px 0 8px 0;
+    gap:40px
+}
+.logoBLock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.name{
+    font-size: 22px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.inp{
+    width: 80%;
+}
+.mr{
+    margin-right: 10px;
+}
+.wrapper svg{
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 30px;
+}
+.wrapper svg:hover{
+    color: black
+}
