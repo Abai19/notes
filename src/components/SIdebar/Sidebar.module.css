@@ -1,0 +1,29 @@
+.wrapper{
+    width: 20%;
+}
+.wrapper svg{
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 35px;
+   margin-left: 30px;
+}
+.wrapper svg:hover{
+    color: black
+}
+.block{
+    display: grid;
+    grid-template-columns:  60px 1fr;
+    gap:30px;
+    padding: 10px;
+    align-items: center;
+}
+.block:hover{
+    background-color: #f1f3f4;
+}
+.active{
+    background-color: #feefc3;
+}
+.title{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+}

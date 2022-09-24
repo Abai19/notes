@@ -4,7 +4,8 @@
     align-items: center;
     border-bottom: 1px solid #F7F4F4;
     padding: 8px 0 8px 0;
-    gap:40px
+    gap:40px;
+    box-sizing: border-box;
 }
 .logoBLock{
     display: flex;
@@ -29,4 +30,10 @@
 }
 .wrapper svg:hover{
     color: black
+}
+@media screen and (max-width: 940px) {
+    .inp{
+        width: 100%;
+    }
+
 }

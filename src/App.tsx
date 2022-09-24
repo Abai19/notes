@@ -1,13 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Header from "./components/Header/Header";
+import './index.css';
+import Layout from "./components/Layout";
+import NotesProvider from "./context/notesContext";
 
 function App() {
   return (
-    <div>
-      <Header/>
-    </div>
+    <NotesProvider>
+      <Layout/>
+    </NotesProvider>
   );
 }
 
