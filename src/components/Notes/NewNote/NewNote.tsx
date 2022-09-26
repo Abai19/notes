@@ -4,8 +4,11 @@ import {NewNoteProps} from "./NewNote.props";
 import styles from './NewNote.module.css'
 import { TextField, Button} from "@mui/material";
 const NewNote = ({...props}:NewNoteProps):JSX.Element => {
-     const {notes,saveNote} = useContext( NotesContext);
-
+    const {createNote} = useContext( NotesContext);
+    const [error, setError] = useState({
+        title: false,
+        description:false
+    });
     const [data, setData] = useState({
         title: '',
         description:''
@@ -17,21 +20,42 @@ const NewNote = ({...props}:NewNoteProps):JSX.Element => {
             [e.target.name]: e.target.value
         })
     }
-    console.log(data)
     const submitData = ()=>{
-        saveNote(data)
+        if(!data.title){
+            setError({
+                ...error,
+                title: !error.title
+            })
+        }
+        else if(!data.description) {
+            setError({
+                ...error,
+                description: !error.description
+            })
+        }
+        else {
+            createNote(data)
+            setError({
+                title: false,
+                description:false
+            })
+        }
     }
 
     return (
         <div {...props} className={styles.wrapper} >
             <div className={styles.title1}>
                 <TextField label="Заголовок" variant="outlined"
+                           error={error.title}
+                           required
                            name="title"
                            onChange={onChange}
                 />
             </div>
             <div className={styles.desc1}>
                 <TextField label="Описание" variant="outlined"
+                           error={error.description}
+                           required
                            name="description"
                            onChange={onChange}
                 />

@@ -8,6 +8,7 @@
     margin-top: 40px;
 }
 .oneNote{
+    position: relative;
     border: 1px solid #F7F4F4;
     border-radius: 10px;
     padding: 4%;
@@ -17,4 +18,33 @@
     font-weight: bold;
     font-size: 17px;
     margin-bottom: 10px;
+}
+.editBlock{
+    position: absolute;
+    right: 10px;
+    top:10px;
+}
+.editBlock button:first-child{
+    margin-right: 10px;
+}
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    padding: 3%;
+}
+.titleModal {
+    width: 100%;
+}
+.descModal {
+    width: 100%;
+}
+.fl{
+    display: flex;
+    justify-content: center;
 }
